@@ -1,5 +1,4 @@
-# CashSight MVP Dependencies
-# Approved Technology Stack (docs/ARCHITECTURE.md, docs/PRD.md)
+# CashSight Dependencies
 
 pandas>=2.2.0
 streamlit>=1.40.0

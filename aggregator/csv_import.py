@@ -3,8 +3,6 @@
 Validates and normalizes tabular financial data (CSV/bank statements) into the
 canonical CashSight transaction schema:
     [date, description, category, type, amount]
-
-Follows docs/ARCHITECTURE.md section 5.4, 5.6 and docs/PRD.md FR-003, FR-005.
 """
 
 from dataclasses import dataclass, field
@@ -35,7 +33,7 @@ COLUMN_ALIASES = {
     "credit": ["credit", "deposit", "cr", "credit amount"],
 }
 
-# Rule-based keyword matching for auto-categorization [FR-005]
+# Rule-based keyword matching for auto-categorization
 CATEGORY_KEYWORD_RULES = {
     "rent": [
         "rent", "kiraya", "lease", "landlord", "shop rent", "godown rent",
@@ -307,7 +305,7 @@ def parse_and_validate_csv(
 
     df_clean = pd.DataFrame(records)
 
-    # Duplicate detection [STANDARD PRACTICE]
+    # Duplicate detection
     duplicate_mask = df_clean.duplicated(subset=["date", "description", "amount", "type"], keep="first")
     duplicate_count = int(duplicate_mask.sum())
     if duplicate_count > 0:

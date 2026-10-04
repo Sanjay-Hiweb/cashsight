@@ -3,8 +3,6 @@
 Provides an intelligent, interactive conversational agent that analyzes
 cash-balance forecasts, impending crunch risks, and transaction patterns to answer
 user questions, explain financial outlooks, and recommend concrete actions.
-
-Follows docs/ARCHITECTURE.md and docs/PRD.md. Completely independent of Streamlit UI.
 """
 
 from dataclasses import dataclass, field

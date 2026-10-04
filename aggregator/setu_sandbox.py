@@ -1,10 +1,8 @@
 """CashSight Account Aggregator Sandbox Adapter (Setu / Finvu).
 
 Implements the read-only, consent-based Account Aggregator sandbox boundary.
-Follows docs/ARCHITECTURE.md section 5.5, docs/PRD.md FR-004, and docs/SECURITY.md.
-
-Note: In accordance with RULES.md, this module never collects or stores bank login
-credentials. It maps sandbox AA data into the common transaction schema.
+Never collects or stores bank login credentials; maps sandbox AA data into
+the common transaction schema.
 """
 
 from dataclasses import dataclass, field

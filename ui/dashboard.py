@@ -7,8 +7,6 @@ Renders:
 - What-If payment delay simulator
 - Multi-source data ingestion (CSV upload, Setu AA sandbox, demo synthetic data)
 - Privacy controls (consent revocation & Right to Erasure data deletion)
-
-Follows docs/DESIGN.md, docs/ARCHITECTURE.md section 5.11, and docs/PRD.md.
 """
 
 from typing import Dict, Any, Optional, List, Tuple
@@ -269,7 +267,7 @@ def render_dashboard(user_id: str, on_logout: Any) -> None:
         else:
             st.success("🟢 Cash Healthy")
 
-    # Cash-Crunch Warning Card (PRD FR-008, FR-009)
+    # Cash-Crunch Warning Card
     if risk_evaluation.has_crunch:
         worst = risk_evaluation.worst_crunch
         earliest = risk_evaluation.earliest_crunch
@@ -329,7 +327,7 @@ def render_dashboard(user_id: str, on_logout: Any) -> None:
 
     st.markdown("---")
 
-    # What-If Payment Delay Simulator (PRD FR-011)
+    # What-If Payment Delay Simulator
     st.subheader("🔮 What-If Simulator: Delay a Payment")
     st.caption("See what happens to your cash forecast if an upcoming supplier payment or expense is delayed by a few days.")
 

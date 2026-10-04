@@ -2,10 +2,7 @@
 
 Allows shop owners to simulate the impact of delaying a specific upcoming or
 recurring outflow payment (e.g., supplier payment, rent) by N days.
-Produces a side-by-side comparison with the baseline forecast.
-
-Follows docs/ARCHITECTURE.md section 5.9 and docs/PRD.md FR-011.
-CRITICAL CONSTRAINT: Never alters the original transaction history or persistent records.
+Produces a side-by-side comparison with the baseline forecast without altering persistent records.
 """
 
 from dataclasses import dataclass

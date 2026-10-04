@@ -48,3 +48,16 @@ desktop.ini
 # Logs
 *.log
 logs/
+
+# Documents & Planning Specs
+*.docx
+*.doc
+*.pdf
+TODO*.md
+RULES*.md
+PRD*.md
+ARCHITECTURE*.md
+DESIGN*.md
+ROADMAP*.md
+SECURITY*.md
+docs/

@@ -2,7 +2,6 @@
 
 Collects user profile, business details, starting cash balance,
 and explicit privacy consent.
-Follows docs/ARCHITECTURE.md section 5.11, docs/PRD.md FR-001/FR-002, and docs/DESIGN.md.
 """
 
 from typing import Optional, Dict, Any, Callable

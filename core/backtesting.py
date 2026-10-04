@@ -3,8 +3,6 @@
 Evaluates forecast accuracy against held-out historical observation periods.
 Computes standard statistical metrics (MAE, RMSE, direction accuracy) and
 financial alert reliability (false alarms, missed alarms).
-
-Follows docs/ARCHITECTURE.md section 9, docs/PRD.md section 8.2, and docs/RULES.md section 7.
 """
 
 from dataclasses import dataclass
@@ -55,8 +53,7 @@ def evaluate_forecast_backtest(
     The last `test_horizon_days` (14 days) are held out as ground truth.
     """
     notes = [
-        "[STANDARD PRACTICE] Evaluated on held-out historical window.",
-        "[TO VERIFY] Exact production acceptance thresholds require founder approval.",
+        "Evaluated on held-out historical observation window.",
     ]
 
     df_clean = _prepare_history_series(historical_net_cash_flow)

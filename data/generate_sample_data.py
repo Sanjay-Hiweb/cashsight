@@ -1,11 +1,9 @@
 """CashSight Synthetic Sample Data Generator.
 
-Generates realistic, clearly fictional transaction data for small Indian shop owners
+Generates realistic, fictional transaction data for small Indian shop owners
 (e.g., Kirana, apparel, hardware store) over a 180-day (6-month) history.
-Includes a realistic future period designed to trigger a potential cash crunch
+Includes a future period designed to trigger a potential cash crunch
 around 10-14 days ahead for testing and demonstration.
-
-Follows docs/ARCHITECTURE.md section 5.3, docs/PRD.md FR-005, and docs/RULES.md.
 """
 
 from datetime import date, timedelta

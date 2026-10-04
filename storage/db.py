@@ -2,9 +2,8 @@
 
 Provides data access boundaries, user isolation, consent management,
 trial tracking, and complete data deletion.
-Follows docs/ARCHITECTURE.md section 5.10, docs/PRD.md FR-012/FR-013, and docs/SECURITY.md.
 
-SECURITY CONSTRAINTS:
+Security:
 - All SQL statements use parameterized queries to prevent SQL injection.
 - Bank login credentials are never stored.
 - Supports complete user data deletion on consent revocation or request.
@@ -259,7 +258,7 @@ class DatabaseManager:
             return df
 
     def delete_user_data(self, user_id: str) -> Dict[str, Any]:
-        """Permanently deletes all data associated with a user (Right to Erasure / FR-013)."""
+        """Permanently deletes all data associated with a user (Right to Erasure)."""
         with self.get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("DELETE FROM transactions WHERE user_id = ?;", (user_id,))

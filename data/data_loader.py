@@ -2,7 +2,6 @@
 
 Provides functions to load, aggregate, and inspect transaction datasets for
 the forecasting and risk engines.
-Follows docs/ARCHITECTURE.md section 5.3 and docs/PRD.md.
 """
 
 from pathlib import Path

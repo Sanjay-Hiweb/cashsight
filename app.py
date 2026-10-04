@@ -1,8 +1,7 @@
 """CashSight — Main Application Entry Point.
 
 Coordinates top-level Streamlit flow between Onboarding and the Dashboard.
-Follows docs/ARCHITECTURE.md section 5.1 and docs/PRD.md.
-Core business logic remains strictly isolated in core/ and storage/.
+Core business logic remains isolated in core/ and storage/.
 """
 
 import streamlit as st

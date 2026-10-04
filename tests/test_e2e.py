@@ -1,8 +1,7 @@
-"""End-to-End Integration Tests for CashSight MVP.
+"""End-to-End Integration Tests for CashSight.
 
 Verifies complete user journeys from ingestion to forecasting, risk detection,
 What-If simulation, database persistence, and data deletion (Right to Erasure).
-Follows docs/TODO.md TEST-002, TEST-003, TEST-004.
 """
 
 import io

@@ -3,9 +3,6 @@
 Compares conservative forecast projections against the user's safety cushion
 to detect impending cash shortages ~14 days in advance.
 Produces plain-language warnings with suggested actions.
-
-Follows docs/ARCHITECTURE.md section 5.8, docs/PRD.md FR-008/FR-009, and docs/DESIGN.md section 5.
-Independent of Streamlit UI.
 """
 
 from dataclasses import dataclass, field
@@ -104,7 +101,7 @@ def detect_cash_crunches(
 ) -> RiskEvaluation:
     """Evaluates 14-day forecast against user's safety cushion.
 
-    Public Contract (docs/ARCHITECTURE.md section 5.8):
+    Parameters:
     - forecast: DataFrame containing [ds, projected_balance, projected_balance_lower]
                 or ForecastResult instance.
     - safety_cushion: Configured threshold in INR (defaults to 25,000 INR).

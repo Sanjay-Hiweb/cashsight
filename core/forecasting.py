@@ -4,9 +4,6 @@ Implements the 14-day cash-flow forecasting algorithms:
 1. Primary method: Prophet (weekly seasonality enabled, yearly seasonality disabled).
 2. Fallback method: statsmodels Holt-Winters Exponential Smoothing.
 3. Graceful baseline fallback when history is sparse.
-
-Follows docs/ARCHITECTURE.md section 5.7 and docs/PRD.md FR-007.
-Completely independent of Streamlit UI.
 """
 
 from dataclasses import dataclass
@@ -227,7 +224,7 @@ def forecast_cash_balance(
 ) -> ForecastResult:
     """Generates a 14-day cash-balance forecast with uncertainty bounds.
 
-    Public Contract (matching docs/ARCHITECTURE.md section 5.7):
+    Parameters:
     - historical_net_cash_flow: DataFrame with [ds, net_cash_flow] or [date, amount, type]
     - current_balance: Starting verified cash balance in INR
     - horizon_days: Forecast horizon (default 14 days)
